@@ -16,7 +16,7 @@ func NewBill(customerName string) bill {
 	}
 }
 
-func updateBillWithTotalAmount(b bill) bill {
+func (b bill) updateBillWithTotalAmount() bill {
 	for _, price := range b.items {
 		b.total += price
 	}
